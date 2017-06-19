@@ -1,7 +1,7 @@
 # Master Thesis Presentation
 ## Hierarchical Abstraction of Execution Traces for Program Comprehension
 
-To run the presentation just run the following command:
+Visit [kajdreef.github.io/slides/](https://kajdreef.github.io/slides/) to see the slides, or run the presentation locally by executing the following command:
 
 ```
 $ make

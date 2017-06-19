@@ -11,7 +11,7 @@ function initPresentation(){
       ratio: '16:9',
       navigation: {
           scroll: false,
-          touch: false,
+          touch: true,
           click: false
       }
   });
