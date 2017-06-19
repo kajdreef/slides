@@ -217,7 +217,7 @@ Simplified steps of the phase detection:
 
   2. Use the call depth to locate the phase boundaries
 
-  3.  Finally, the result is a phase tree
+  3.  Finally, the result is a preliminary phase tree
   <p>
       <img src="images/datastructure/tree-structure.pdf.jpg" style="width: 50%"></img>
   </p>
