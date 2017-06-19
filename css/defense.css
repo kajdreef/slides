@@ -4,6 +4,7 @@
 
 /* Common style stuff. */
 body {
+  -webkit-font-smoothing: antialiased;
   font-family: 'Droid Serif';
 }
 h1, h2, h3 {
