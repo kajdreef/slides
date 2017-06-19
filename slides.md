@@ -40,14 +40,14 @@ template: inverse
 ---
 
 ## Introduction
-+ Software comprehension is essential, while performing maintenance tasks
++ Software comprehension is essential while performing maintenance tasks
 
-+ Understanding runtime behavior is complex, because execution traces:
++ Understanding runtime behavior is complex because execution traces:
     1. are long, *i.e.,* 1.000.000's of events;
-    2. contain many low level details;
+    2. contain many low-level details;
     3. contain no abstractions.
 
-+ Previous work focussed on:
++ Previous work focused on:
     + Visualizing traces
     + Discover phases in the execution
 
@@ -217,7 +217,7 @@ Simplified steps of the phase detection:
 
   2. Use the call depth to locate the phase boundaries
 
-  3.  Finally, the result is a tree of phases
+  3.  Finally, the result is a phase tree
   <p>
       <img src="images/datastructure/tree-structure.pdf.jpg" style="width: 50%"></img>
   </p>
@@ -465,7 +465,7 @@ template: inverse
 
   + *Depth*: behind every timeline another timeline can be displayed with a lower level of granularity
 
-  + *Color* are used to more easily recognize similar phases.
+  + *Colors* are used to help recognize similar phases.
 
 <img src="images/vis/javac/fpm/level5.png" style="width: 90%"></img>
 
