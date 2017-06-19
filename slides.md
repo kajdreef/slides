@@ -792,13 +792,56 @@ count: false
 ---
 count: false
 .left-column[
-## Evaluation
-#### Visualization Comparison
+## Visualization Comparison
+#### 1. Navigation
+
 ]
 .right-column[
 
 **RQ5**: *What is the impact of frequent pattern mining on the visualization?*
 
+<p style="text-align: center;">Visualization without frequent pattern mining</p>
+![:scale 100%;display:block;margin:auto; ](images/vis/compare-vis/gson-hierarchical2.png)
+
+<p style="text-align: center;">Visualization with frequent pattern mining</p>
+![:scale 100%;display:block;margin:auto; ](images/vis/compare-vis/gson-fpm2.png)
+
+
+]
+
+---
+count: false
+.left-column[
+## Visualization Comparison
+#### 1. Navigation
+#### 2. Behavior Detection
+]
+.right-column[
+
+**RQ5**: *What is the impact of frequent pattern mining on the visualization?*
+
+<p style="text-align: center;">Visualization without frequent pattern mining</p>
+![:scale 100%;display:block;margin:auto; ](images/vis/compare-vis/gson-hierarchical.png)
+
+<p style="text-align: center;">Visualization with frequent pattern mining</p>
+![:scale 100%;display:block;margin:auto; ](images/vis/compare-vis/gson-fpm.png)
+
+]
+
+---
+count: false
+.left-column[
+## Visualization Comparison
+#### 1. Navigation
+#### 2. Behavior Detection
+#### 3. Visualizing Patterns
+]
+.right-column[
+
+**RQ5**: *What is the impact of frequent pattern mining on the visualization?*
+
+
+![:scale 100%;display:block;margin:auto; ](images/vis/compare-vis/nanoxml-loop-compare.jpg)
 
 ]
 
