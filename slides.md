@@ -865,10 +865,10 @@ count: false
 ## Dynamically Inferred State Machine
 
 <p style="text-align: center;">Details hidden away</p>
-![:scale 45%;display:block;margin:auto;](images/vis/dism/DISM1.jp2)
+![:scale 45%;display:block;margin:auto;](images/vis/dism/DISM1.jpg)
 
 <p style="text-align: center;">Unfold the details</p>
-![:scale 45%;display:block;margin:auto;](images/vis/dism/DISM2.jp2)
+![:scale 45%;display:block;margin:auto;](images/vis/dism/DISM2.jpg)
 
 ---
 count: false
