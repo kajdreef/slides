@@ -880,3 +880,34 @@ count: false
 
 <p style="text-align: center;">Fold similar concurrent threads into each other</p>
 ![:scale 45%;display:block;margin:auto;](images/vis/threads2.png)
+
+
+---
+count:false
+## Algorithm: Find Phases in History
+
+<img src="images/algorithm/algorithm2.png" style="width: 50%"></img>
+
+
+---
+count:false
+## Example: Duplicate Detection and Clustering
+
+<img src="images/datastructure/DCT2PhaseTree.pdf.jpg" style="width: 100%"></img>
+
+
+---
+count:false
+## NanoXML distribution
+
+<div style="display:inline-block; width:100%">
+    <img style="display: block; width:100%; margin: auto;" src="images/evaluation/nanoxml-phase-distribution.png"></img>
+</div>
+
+---
+count:false
+## JEdit distribution
+
+<div style="display:inline-block; width:100%">
+    <img style="display: block; width:100%; margin: auto;" src="images/evaluation/jedit-phase-distribution.png"></img>
+</div>
