@@ -335,8 +335,8 @@ count: false
   <img style="width: 90%;" src="images/evaluation/size-abstraction.png"></img>
 </div>
 
-<p style="text-align:center">Javac phase distribution:</p>
-  <img src="images/evaluation/javac-phase-distribution.png" style="width: 90%"></img>
+<p style="text-align:center">Phase distribution:</p>
+  <img src="images/barcharts/barcharts.png" style="width: 100%"></img>
 ]
 
 ---
@@ -351,8 +351,8 @@ count: false
 
 **RQ2**: *Does the hierarchical phase abstraction provide substantially different levels of granularities of behavior?*
 
-<p style="text-align:center">Javac phase distribution:</p>
-  <img src="images/evaluation/javac-phase-distribution.png" style="width: 90%"></img>
+<p style="text-align:center">Phase distribution:</p>
+  <img src="images/barcharts/barcharts.png" style="width: 100%"></img>
 ]
 
 ---
