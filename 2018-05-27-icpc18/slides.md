@@ -61,7 +61,7 @@ template: inverse
 
 ---
 
-## Sage
+## Approach
 + **Goal**: *Hierarchically abstracting an execution trace into high-level phases.*
 
 --
@@ -75,7 +75,7 @@ template: inverse
 ---
 
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 
 ]
@@ -97,7 +97,7 @@ template: inverse
 
 ---
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 ]
@@ -115,7 +115,7 @@ Simplified steps of the phase detection:
 ---
 count: false
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 ]
@@ -134,7 +134,7 @@ Simplified steps of the phase detection:
 count: false
 
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 ]
@@ -153,7 +153,7 @@ Simplified steps of the phase detection:
 count: false
 
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 ]
@@ -170,7 +170,7 @@ Simplified steps of the phase detection:
 ]
 ---
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 #### Model Building
@@ -183,7 +183,7 @@ Simplified steps of the phase detection:
 ---
 count:false
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 #### Model Building
@@ -205,7 +205,7 @@ count:false
 
 ---
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 #### Model Building
@@ -222,7 +222,7 @@ count:false
 ---
 count: false
 .left-column[
-## Sage
+## Approach
 #### Data Collection
 #### Phase Detection
 #### Model Building
@@ -443,7 +443,7 @@ count: false
 count: false
 
 .left-column[
-## SageVis
+## Sage
 #### Data Structure
 ]
 .right-column[
@@ -506,8 +506,7 @@ count:false
 ---
 count:false
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 ]
@@ -520,8 +519,7 @@ count:false
 ---
 count:false
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -535,8 +533,7 @@ count:false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -552,8 +549,7 @@ count: false
 
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -567,8 +563,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -582,8 +577,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -597,8 +591,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -612,8 +605,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -627,8 +619,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -642,8 +633,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
@@ -657,8 +647,7 @@ count: false
 count: false
 
 .left-column[
-## Sage
-#### Data Collection
+## Approach
 #### Phase Detection
 #### <li style="text-indent: 10%"> Algorithm</li>
 #### <li style="text-indent: 10%"> Example</li>
