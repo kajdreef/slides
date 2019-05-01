@@ -58,8 +58,8 @@
 ## Types of Attention (1)
 
 
-+ [Global attention](https://arxiv.org/pdf/1508.04025.pdf): always attends to all source words.
-+ [Local attention](https://arxiv.org/pdf/1508.04025.pdf): only looks at a subset of source words at a time. 
++ [Global/Soft attention](https://arxiv.org/pdf/1508.04025.pdf): always attends to all source words (add weights to each word).
++ [Local/Hard attention](https://arxiv.org/pdf/1508.04025.pdf): only look at a subset of source words at a time. 
     + [Location-based](https://arxiv.org/pdf/1410.5401.pdf)
     + [Content-based](https://arxiv.org/pdf/1410.5401.pdf)
 + [Self-Attention](https://arxiv.org/pdf/1601.06733.pdf): Relating different positions of the same input sequence. 
@@ -175,7 +175,7 @@
 
 ## Attention Mechanism and Memory Networks (2)
 
-![](./img/NTM-attention.png)
+<img src="./img/NTM-attention.png" style="max-width:55%;"/>
 
 [src](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
 
@@ -185,9 +185,11 @@
 # More References:
 
 + [Neural Machine Translation with Attention](https://www.tensorflow.org/alpha/tutorials/text/nmt_with_attention)
-+ [Complete code examples for Machine Translation with Attention, Image Captioning, Text Generation, and DCGAN implemented with tf.keras and eager execution](https://medium.com/tensorflow/complete-code-examples-for-machine-translation-with-attention-image-captioning-text-generation-51663d07a63d)
++ [Complete code examples for Machine Translation with Attention, Image Captioning, Text Generation, and DCGAN implemented with tf.keras and eager execution](https://medium.com/tensorflow/complete-code-examples-for-machine-translation-with-attention-image-captioning-text-generation-51663d07a63d) (code examples)
 + [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/)
 + [Attention Mechanisms and Memory Networks](https://skymind.ai/wiki/attention-mechanism-memory-network)
 + [Morning Paper - Memory Networks](https://blog.acolyer.org/2016/03/10/memory-networks/)
 + [Morning Paper - Neural Turing Machines](https://blog.acolyer.org/2016/03/09/neural-turing-machines/)
 + [Family of attention mechanisms](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#a-family-of-attention-mechanisms)
++ [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)(!!)
++ [Attention is all you need](http://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf)(!!)
