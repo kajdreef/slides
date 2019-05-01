@@ -1,10 +1,14 @@
 # Attention Mechanism and Memory Networks
 
+![](./img/joke.png)
+
+[source](https://skymind.ai/wiki/attention-mechanism-memory-network)
+
 ----  ----
 
 ## Attention Mechanism
 
-* **Idea**: Focus on a subset of the data
+* **Idea**: Focus or orient the perception on a subset of the available data.
 * <!-- .element: class="fragment" -->
     Attention forms a mapping between parts of the input and corresponding output sequence.
     + Difficult to learn these mappings...
@@ -19,8 +23,6 @@
 + Sort of...
     + However, with LSTM each previous step influences the incoming LSTM cell state.
     + With an Attention Mechanisms this doesn't have to be the case.
-
-
 
 ----  ----
 
@@ -49,6 +51,26 @@
 <img src="./img/attention-ex3.png">
 
 [source](https://distill.pub/2016/augmented-rnns/#attentional-interfaces)
+
+
+----  ----
+
+## Types of Attention (1)
+
+
++ [Global attention](https://arxiv.org/pdf/1508.04025.pdf): always attends to all source words.
++ [Local attention](https://arxiv.org/pdf/1508.04025.pdf): only looks at a subset of source words at a time. 
+    + [Location-based](https://arxiv.org/pdf/1410.5401.pdf)
+    + [Content-based](https://arxiv.org/pdf/1410.5401.pdf)
++ [Self-Attention](https://arxiv.org/pdf/1601.06733.pdf): Relating different positions of the same input sequence. 
+
+
+----  ----
+
+## Types of Attention (2): Self-Attention
+
+![](./img/self-attention.png)
+
 
 
 ----  ----
@@ -139,14 +161,23 @@
 
 ----  ----
 
+## Attention Mechanism and Memory Networks (1)
 
-## Attention Mechanism and External Memory
-
-+ Attention Mechanism enables us to train an NN with external memory (because it returns a distribution).
++ Attention Mechanism enables us to focus a subset of the external memory
 
 + Different ways to access the memory:
     + **Location-based**: Allows relative movement in memory.
     + **Content-based**: Allows us to search through the memory and focus on places that match what we are looking for.
+
++ Multiple attention mechanisms can be used in the same memory network
+
+----  ----
+
+## Attention Mechanism and Memory Networks (2)
+
+![](./img/NTM-attention.png)
+
+[src](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
 
 
 ----  ----
@@ -159,3 +190,4 @@
 + [Attention Mechanisms and Memory Networks](https://skymind.ai/wiki/attention-mechanism-memory-network)
 + [Morning Paper - Memory Networks](https://blog.acolyer.org/2016/03/10/memory-networks/)
 + [Morning Paper - Neural Turing Machines](https://blog.acolyer.org/2016/03/09/neural-turing-machines/)
++ [Family of attention mechanisms](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#a-family-of-attention-mechanisms)
