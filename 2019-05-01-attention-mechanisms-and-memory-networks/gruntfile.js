@@ -130,7 +130,7 @@ module.exports = grunt => {
 	grunt.registerTask('js', ['jshint', 'uglify', 'qunit']);
 
 	// All CSS
-	grunt.registerTask('css', ['cssmin']);
+	grunt.registerTask('css', []);
 
 	// Package presentation to archive
 	grunt.registerTask('package', ['default', 'zip']);

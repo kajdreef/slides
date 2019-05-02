@@ -80,7 +80,6 @@ ul, ol, div, p {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-
 	page-break-after: always;
 }
 
@@ -111,6 +110,9 @@ ul, ol, div, p {
 
 .reveal img {
 	box-shadow: none;
+}
+
+.reveal .pdf-page img {
 }
 
 .reveal .roll {

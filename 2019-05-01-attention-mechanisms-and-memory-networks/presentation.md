@@ -4,56 +4,51 @@
 
 [source](https://skymind.ai/wiki/attention-mechanism-memory-network)
 
-----  ----
+----
 
 ## Attention Mechanism
 
 * **Idea**: Focus or orient the perception on a subset of the available data.
-* <!-- .element: class="fragment" -->
-    Attention forms a mapping between parts of the input and corresponding output sequence.
+* Attention forms a mapping between parts of the input and corresponding output sequence.
     + Difficult to learn these mappings...
     + How do you learn to recognize these mappings?
 
-----  ----
+----
 
 ## Didn't LSTM solve this?
-
-<div class="fragment" />
 
 + Sort of...
     + However, with LSTM each previous step influences the incoming LSTM cell state.
     + With an Attention Mechanisms this doesn't have to be the case.
 
-----  ----
+----
 
 ## Attention Mechanism
-#### Example: Translation Architecture
+### Example: Translation Architecture
 
-<img src="./img/attention-ex1.png">
+![](./img/attention-ex1.png)
 
 [source](https://distill.pub/2016/augmented-rnns/#attentional-interfaces)
 
-----  ----
+----
 
 ## Attention Mechanism
 #### Example: Translation 1
 
-<img src="./img/attention-ex2.png">
+![](./img/attention-ex2.png)
 
 [source](https://distill.pub/2016/augmented-rnns/#attentional-interfaces)
 
-
-----  ----
+----
 
 ## Attention Mechanism
 #### Example: Translation 2
 
-<img src="./img/attention-ex3.png">
+![](./img/attention-ex3.png)
 
 [source](https://distill.pub/2016/augmented-rnns/#attentional-interfaces)
 
-
-----  ----
+----
 
 ## Types of Attention (1)
 
@@ -64,20 +59,17 @@
     + [Content-based](https://arxiv.org/pdf/1410.5401.pdf)
 + [Self-Attention](https://arxiv.org/pdf/1601.06733.pdf): Relating different positions of the same input sequence. 
 
-
-----  ----
+----
 
 ## Types of Attention (2): Self-Attention
 
 ![](./img/self-attention.png)
 
 
-
-----  ----
+----
 
 # Memory
 
-<div class="fragment" />
 <table>
     	<thead><tr>
             <th>Human Memory</th>
@@ -101,33 +93,27 @@
 
 <br/>
 
-+ <!-- .element: class="fragment" --> But... how about Neural Networks?
-<div class="fragment" />
-
++ But... how about Neural Networks?
     - RNN
     - LSTM/GRU
     - Memory Networks
 
-
-----  ----
+----
 
 ## Different Types of Memory
 
-+ <!-- .element: class="fragment" -->      
-    **Recurrent Neural Networks** (RNN)
++ **Recurrent Neural Networks** (RNN)
     - Allows us to take previous states into account, but *not* control the relevance of each element in that state.
     - But [vanishing and exploding gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem)...
     - And no *external* memory
-+ <!-- .element: class="fragment" -->  
-    **[Long Short Term Memory (LSTM)](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)**
++ **[Long Short Term Memory (LSTM)](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)**
     - Allows us to take previous state into account and *control* the 'relevance' of each element in that state.
     - But still, no *external* memory
-+ <!-- .element: class="fragment" -->  
-    **[Memory Networks](https://arxiv.org/pdf/1410.3916.pdf)**
++ **[Memory Networks](https://arxiv.org/pdf/1410.3916.pdf)**
     - External memory bank
     - Read and Write capabilities
 
-----  ----
+----
 
 # Memory Network
 
@@ -137,7 +123,7 @@
 
 - Memory Networks are also called MemNN (Memory Neural Networks)
 
-----  ----
+----
 
 # Memory Network - Architecture 1
 
@@ -147,11 +133,11 @@
 
 + External memory can contain a knowledge base or store data that has been computed.
 
-----  ----
+----
 
 # Memory Network - Architecture 2
 
-<img src="./img/memory-network.png">
+![](./img/memory-network.png)
 
 + I: contains the input
 + G: Updates the memories based on the input
@@ -159,7 +145,7 @@
 
 [source](https://blog.acolyer.org/2016/03/10/memory-networks/)
 
-----  ----
+----
 
 ## Attention Mechanism and Memory Networks (1)
 
@@ -171,16 +157,16 @@
 
 + Multiple attention mechanisms can be used in the same memory network
 
-----  ----
+----
 
 ## Attention Mechanism and Memory Networks (2)
 
-<img src="./img/NTM-attention.png" style="max-width:55%;"/>
+![](./img/NTM-attention.png) <!-- .element height="60%" width="60%" -->
 
 [src](https://distill.pub/2016/augmented-rnns/#neural-turing-machines)
 
 
-----  ----
+----
 
 # More References:
 
