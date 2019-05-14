@@ -79,7 +79,7 @@
 | FOP    | 110x10^6       | 57x10^6               | 51%          |
 | PMD    | 18x10^6        | 9x10^6                | 50%          |
 
-+ On avergage nearly 65%
++ On average nearly 65%
 
 ----
 
@@ -95,7 +95,7 @@ Given two memory locations, l1 and l2, they are said to be dynamically dependent
 
 + **Dynamic data dependence** - A runtime instruction writes a value to the memory location l2 that is computed using the value read from memory location l1.
 
-+ **Dynamic control dependence** - A runtime instruction that writes a value to the memory location l2 and the occurence of the runtime instruction was predicated on the value at memory location l1.
++ **Dynamic control dependence** - A runtime instruction that writes a value to the memory location l2 and the occurrence of the runtime instruction was predicated on the value at memory location l1.
 ```
 if (l1 == ...) {
     write to l2
@@ -175,8 +175,8 @@ Summary-based approach to dynamic dependence analysis leads to:
 ## Create a Dynamic Dependence Summary
 
 
-1. Obtain the **Concrete Summaries**, i.e., a set of dynamically observed data or control dependencies between the inputs and outputs of a specific infocation of a given method.
-2. Obtain the **Abstract Summaries**, i.e., Replace concreate information with suitable abstract information.
+1. Obtain the **Concrete Summaries**, i.e., a set of dynamically observed data or control dependencies between the inputs and outputs of a specific invocation of a given method.
+2. Obtain the **Abstract Summaries**, i.e., Replace concrete information with suitable abstract information.
 3. Obtain the **Aggregate Dependence Summary**, i.e., for method invocation of a given method that share the same dynamically observed input argument types perform a union of all inputs, outputs, and dependence edges of the abstract summary.
 
 ----
@@ -201,7 +201,7 @@ Summary-based approach to dynamic dependence analysis leads to:
 
 ## Summary Application
 
-1. Symbolic names in a method summary's input and output sets are substituted with their respective concreate locations at a method invocation.
+1. Symbolic names in a method summary's input and output sets are substituted with their respective concrete locations at a method invocation.
 2. Dependencies between the input and output of a method invocation are used to derive the runtime dependencies.
 
 ----
@@ -216,7 +216,7 @@ Summary-based approach to dynamic dependence analysis leads to:
 
 ![](./img/abstract_summary.png)<!-- .element height="40%" width="50%" -->
 
-+ Sustitute p0 with O02 and p1 with i
++ Substitute p0 with O02 and p1 with i
 
 ----
 
@@ -287,8 +287,6 @@ Research Questions:
     + How does quality of test suite impact the ability to create summaries?
     + When change is made to summarized method do we each time need to rerun summarizing?
 
-+ Could summaries be reused accross projects?
-
 + What are characteristics of a library that make them suitable for summarization?
 
 + Speed up is 13x in comparison to dynamic analysis without summaries. Dynamic Analysis will still be very expensive.
@@ -301,7 +299,7 @@ Research Questions:
     + Potential high cost savings
     + Reuse of dynamic summaries caused the costs in performing dynamic dependency analysis to be significantly reduced.
     + Can lead to a perceptible loss of accuracy. 
-    + Traceoff: Small loss of accuracy for performance gain.
+    + Trade-off: Small loss of accuracy for performance gain.
 
 ----
 
