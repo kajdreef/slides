@@ -1,5 +1,5 @@
 # Dynamic Analysis: 
-## A Survey of the Current State-of-the-Art
+## A Survey of the State-of-the-Art
 #### Kaj Dreef
 
 ----
