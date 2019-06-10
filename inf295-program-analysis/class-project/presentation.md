@@ -120,7 +120,7 @@
 
 + Scalability/Overhead - Creating dynamic analysis tools that scale to large systems.
 + Concurrency/Distributed Systems
-    + 
++ Interactive/Feedback-driven dynamic analysis
 
 ----
 
