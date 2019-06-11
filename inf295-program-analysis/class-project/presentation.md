@@ -144,7 +144,7 @@
 ## Future Work
 
 + Currently, survey limited to ICSE and ASE over the last 4 years.
-    + Expend to last decade;
-    + Expend venues to FSE, ICPC, ISSTA, SCAM, TOSEM, TSE, VISSOFT, etc.
+    + Expand to last decade;
+    + Expand venues to FSE, ICPC, ISSTA, SCAM, TOSEM, TSE, VISSOFT, etc.
 
 + Have not (yet) non-recursively gone through the related work, so seminal work is (probably) missing
