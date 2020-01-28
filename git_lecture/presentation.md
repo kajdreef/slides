@@ -5,18 +5,20 @@
 
 <section data-background="#eee">
 
-![](https://imgs.xkcd.com/comics/git.png )
-
-----
-
-<section data-background="#eee">
-
 #  Outline
 1. What is git?
 3. Basic commands
 4. Demo time!
 5. Some final thoughts!
 6. Resources
+
+----
+
+<section data-background="#eee">
+
+![](https://imgs.xkcd.com/comics/git.png )
+
+[source](https://xkcd.com/1597/)
 
 ----
 
