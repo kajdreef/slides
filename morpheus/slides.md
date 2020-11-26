@@ -377,10 +377,17 @@ template: inverse
   ]
 ]
 
+???
+- red line represents the median
+- Task 2:
+  - same medians
+  - big variance.
+- Precision: Ratio of *all* selected methods and those are correct.
+
 --
 
 .summary[
-  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks
+  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.
 ]
 
 ---
@@ -397,10 +404,13 @@ template: inverse
   ]
 ]
 
+???
+- Recall: Ratio of *all* selected methods and all relevant methods.
+
 --
 
 .summary[
-  ### Visualization has a higher recall than the IDE <br/>in 5 out 5 tasks
+  ### Visualization has a higher recall than the IDE <br/>in in all tasks.
 ]
 
 ---
