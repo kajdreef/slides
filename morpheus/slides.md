@@ -3,8 +3,8 @@ class: center, middle, inverse
 layout: true
 ---
 
-# **Morpheus**
-## *Visualizing Form and Function of Test Suites*
+<!-- # **Morpheus** -->
+# Visualizing Form and Function of Test Suites
 
 #### Kaj Dreef
 
@@ -34,24 +34,58 @@ template: inverse
 
 ## Introduction
 
-- Test suite should be an asset:
-  - Which components are tested?
-  - Which components remain untested or under-tested?
-  - Which methods are covered when a test is failing?
-  - etc.
+- Testing is important
 
---
+- Comprehending the test suite is important
 
-<!-- Current state -->
-- **Current state**: Integrated Development Environment
-  - Local 
-  - Global (test suite covers all these lines, but not by which test, or easy traceability)
+- Traditional tools provide challenges to comprehension
 
---
+<!-- - Questions a developer might ask:
+    - What types of tests are available in the test suite?
+    - Which components remain untested or under-tested?
+    - What is a specific test covering?
+    - Which test cases cover a specific (set of) method(s)?
+    - Which methods are covered when a test is failing? -->
+???
 
-<!-- Our solution -->
-- Solution: Form and Function:
-  - our goal:
+- Testing important:
+  - Verify product behavior
+  - Verify correctness by establishing a test oracle
+
+- Test suite provides valuable information regarding how a system is expected to behave.
+
+- Comprehending the test suite aids in better understanding your system.
+
+- Test-suite development and maintenance is difficult, particularly when comprehension is limited
+
+- Traditional tools provide challenges to comprehension, which presents an opportunity to improve
+---
+
+## Motivating scenario
+<br/><br/><br/><br/>
+> A developer wants to refactor an existing method. Before starting, the developer is interested in determining which tests are covering this method to assure that the refactoring will not cause any regression.
+
+---
+
+## Comprehension: Form & Function
+
+<br/>
+> **Form**: Global overview of the composition of the test suite.
+
+<br/>
+
+> **Function**: Local view or the behavior the test is testing for.  
+
+
+???
+
+Form = Composition of the test suite
+  - unit, integration, system tests
+  - What is covered and not covered by the tests
+
+The “function” of a test deals with the specific desired behavior that the test is testing for, and the specific components and methods that it executes when doing so.
+
+- However, test suite comprehension brings its own unique set of challenges... (next slide)
 
 ---
 template: inverse
@@ -62,17 +96,23 @@ template: inverse
 
 ## Challenges
 
-- Challenge 1: Large test Suites with many tests
-  <!-- - Traceability between test and production code -->
+- Challenge 1: Large test suites with many tests
 
 - Challenge 2: Maintaining test suites
-  <!-- - Types of tests
-  - Gaps in test suite -->
-
+  
 - Challenge 3: Tools with local views offer inadequate comprehension
 
 ???
 
+- Challenge 1:
+  - Traceability between test and production code
+
+- Challenge 2:
+  - Types of tests
+  - Gaps in test suite
+
+- Challenge 3:
+  - 
 ---
 
 template: inverse
@@ -87,45 +127,28 @@ template: inverse
 
 ]
 .right-column[
-- Test Matrix
-
-  - **Columns**: Methods
-  - **Rows**: Tests
-  - **Intersection**: if test covers a method or not
-
-]
-
----
-count:false
-
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-
-]
-.right-column[
-- Test Matrix
-
-  - **Columns**: Methods
-  - **Rows**: Tests
-  - **Intersection**: if test covers a method or not
-
-- Allow each dimension to be parameterized to represent other artifacts, e.g.,:
-  - Individual source-code lines
-  - Methods
-  - Commits
-  - etc.
-]
-
----
-
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-
-]
-.right-column[
-  <img src="img/mocks/test-matrix-example-0.png" style="max-width: 75%; max-height: 75%;"></img>
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-0.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
 ]
 
 ---
@@ -137,28 +160,23 @@ count:false
 
 ]
 .right-column[
-- Used to convey additional information regarding:
-  - Relation between individual artifacts on a single axis
-  
-      - e.g., all tests within the same package 
-  
-  - Relation between axes
-
-      - e.g., failing of a test and which methods were covered.
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-1.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Color can be used to show:</li>
+  <ul>
+    <li> Pass fail status </li>
+    <li> Package composition </li>
+    <li> Suspiciousness </li>
+  </ul>
+</div>
 ]
-
----
-
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-#### Color
-
-]
-.right-column[
-  <img src="img/mocks/test-matrix-example-1.png" style="max-width: 75%; max-height: 75%;"></img>
-]
-
 
 ---
 
@@ -170,28 +188,29 @@ count:false
 
 ]
 .right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-sorted.png"  style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Sorting based on:</li>
+  <ul>
+    <li> Directory path and filenames </li>
+    <li> Coverage </li>
+    <li> suspiciousness </li>
+  </ul>
+</div>
+]
+
+???
 - Artifacts within a project are normally not isolated
 
 - Goal: Juxtaposes artifacts that are related to each other.
 
-- Types of sorting:
-  - Sorting tests and production artifacts based on their directory path and filenames
-  - Clustering production artifacts that are tested together;
-  - Sorting tests and code components by metrics such as coverage and suspiciousness, respectively
-]
-
----
-
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-#### Color
-#### Sort
-
-]
-.right-column[
-  <img src="img/mocks/test-matrix-example-sorted.png" style="max-width: 75%; max-height: 75%;"></img>
-]
 
 ---
 
@@ -204,6 +223,25 @@ count:false
 
 ]
 .right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-5-filtered-sorted.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Filtering based on:</li>
+  <ul>
+    <li> Test type</li>
+    <li> Test result </li>
+    <li> Coverage </li>
+  </ul>
+</div>
+]
+
+???
 - Focussed view of a subset of the test matrix..
 
 - Goal: Filter down to aid in improved comprehension of a project's test suite.
@@ -212,21 +250,6 @@ count:false
   - filter based on test type, e.g., unit, integration, system test;
   - filter based on test result;
   - filter based on coverage.
-]
-
----
-
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-#### Color
-#### Sort
-#### Filter
-
-]
-.right-column[
-  <img src="img/mocks/test-matrix-example-5-filtered-sorted.png" style="max-width: 75%; max-height: 75%;"></img>
-]
 
 ---
 
@@ -255,7 +278,6 @@ template: inverse
 
 ---
 
-
 .left-column[
 ## Implementation
 #### Data Collection
@@ -266,8 +288,12 @@ template: inverse
   <img src="img/architecture.png" style="max-width: 75%; max-height: 75%;"></img>
 ]
 
----
+???
 
+- Web Application, with a client server architecture
+- For the sake of time I will skip over this for now, but feel free to ask questions later.
+
+---
 
 .left-column[
 ## Implementation
@@ -276,10 +302,12 @@ template: inverse
 #### Visualization
 ]
 .right-column[
-  <br><br><br>
+<br/><br/><br/>
   <img src="img/morpheus-ui.png" style="max-width: 100%; max-height: 75%;"></img>
+  .center[
+    [<a href="http://morpheus.kajdreef.com/visualization" target="_blank">morpheus demo</a>]
+  ]
 ]
-
 
 ---
 
@@ -294,7 +322,8 @@ template: inverse
 #### Research Questions
 ]
 .right-column[
-  <br><br>
+<br/><br/>
+
 - **RQ1**: Can the visualization provide insights into the *composition* of the test suite?
 
 - **RQ2**: Can the visualization provide *traceability* between test and production code?
@@ -312,16 +341,22 @@ template: inverse
 ]
 .right-column[
 - Three tasks:
-  1. Distinguish different types of tests covering a specific method
+  1. Identify all unit and integration tests for method A.
+  <!-- 1. Distinguish different types of tests covering a specific method
       - Locate all unit tests covering that method
-      - Locate all integration tests covering that method
+      - Locate all integration tests covering that method -->
   2. Locate all tests that cover a specific method
   3. Locate all methods that are co-failing within a specific method
 
-- Two rounds (where all tasks were performed on commons-cli)
-  - Round 1: Participants development environment (showed how to  and run tests and obtain test coverage).
+- Two rounds  <!-- (where all tasks were performed on commons-cli) -->
+  - Round 1: Participants development environment 
   - Round 2: Only the visualization
 ]
+
+???
+
+- All tasks performed on the same project, commons-cli
+
 
 ---
 
@@ -337,7 +372,9 @@ template: inverse
 ]
 .right-column[
   <img src="img/results/boxplot-precision-1.png" style="margin: auto; display:block; max-width: 80%;"/>
-###### higher precision is better.
+  .center[
+    ###### higher precision is better.
+  ]
 ]
 
 ---
@@ -349,7 +386,9 @@ template: inverse
 ]
 .right-column[
 <img src="img/results/boxplot-recall-1.png" style="margin: auto; display:block; max-width: 80%;"/>
-###### higher recall is better.
+  .center[
+    ###### higher recall is better.
+  ]
 ]
 
 ---
@@ -362,7 +401,9 @@ template: inverse
 ]
 .right-column[
 <img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
-###### less time is better.
+  .center[
+    ###### less time is better.
+  ]
 ]
 
 ---
@@ -392,13 +433,6 @@ template: inverse
 - Challenge 3: Tools with local views offer inadequate comprehension
 
   - Morpheus is able to accurately identify which methods fail together, allowing developers to step outside of just a local view.
-
----
-
-template: inverse
-
-# Demo
-[<a href="http://morpheus.kajdreef.com/visualization" target="_blank">morpheus demo</a>]
 
 ---
 
