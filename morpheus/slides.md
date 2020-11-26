@@ -377,6 +377,12 @@ template: inverse
   ]
 ]
 
+--
+
+.summary[
+  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks
+]
+
 ---
 
 .left-column[
@@ -389,6 +395,12 @@ template: inverse
   .center[
     ###### higher recall is better.
   ]
+]
+
+--
+
+.summary[
+  ### Visualization has a higher recall than the IDE <br/>in 5 out 5 tasks
 ]
 
 ---
@@ -405,6 +417,13 @@ template: inverse
     ###### less time is better.
   ]
 ]
+
+--
+
+.summary[
+  ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks.
+]
+
 
 ---
 
