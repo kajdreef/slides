@@ -9,6 +9,9 @@ layout: true
 #### Kaj Dreef
 
 ???
+- Good afternoon, thank you for attending my master defense.
+
+- The topic of today will be Visualizing form and function of test suites.
 
 ---
 layout: false
@@ -24,6 +27,16 @@ layout: false
 7. Conclusion
 
 ???
+
+- The outline of today will be:
+  1. Introduction
+  2. Challenges
+  2. Morpheus Visualization
+  3. Implementation
+  4. Evaluation
+  5. Results 
+  6. Discussion
+  7. Conclusion
 
 ---
 template: inverse
@@ -49,21 +62,28 @@ template: inverse
 ???
 
 - Testing important:
-  - Verify product behavior
-  - Verify correctness by establishing a test oracle
+  - It allows developers to **verify product behavior**.
+  - and, **verify correctness by establishing a test oracle**
 
 - Test suite provides valuable information regarding how a system is expected to behave.
+  - As a result, the test suite can aid in better understanding your system.
 
-- Comprehending the test suite aids in better understanding your system.
+<!-- - Test-suite development and maintenance is difficult, particularly when comprehension is limited -->
 
-- Test-suite development and maintenance is difficult, particularly when comprehension is limited
-
-- Traditional tools provide challenges to comprehension, which presents an opportunity to improve
+- Traditional tools provide challenges to comprehension, due to giving only a local, *file-centric*, view, presenting an opportunity to improve.
 ---
 
 ## Motivating scenario
 <br/><br/><br/><br/>
 > A developer wants to refactor an existing method. Before starting, the developer is interested in determining which tests are covering this method to assure that the refactoring will not cause any regression.
+
+???
+
+> A developer wants to refactor an existing method. Before starting, the developer is interested in determining which tests are covering this method to assure that the refactoring will not cause any regression.
+
+- IDE provide *file-centric* view of what you are working on
+  - Unable to provide insight into what tests cover the method.
+
 
 ---
 
@@ -75,7 +95,6 @@ template: inverse
 <br/>
 
 > **Function**: Local view or the behavior the test is testing for.  
-
 
 ???
 
@@ -105,14 +124,19 @@ template: inverse
 ???
 
 - Challenge 1:
-  - Traceability between test and production code
+  - Developers have difficulty figuring out which test cases cover what methods.
+  - Lack of traceability between test and production code
 
 - Challenge 2:
-  - Types of tests
-  - Gaps in test suite
+  - Developers have finite resources, and thus most time is spend on production code, leading to a loss in understanding of the form and function of the test suite.
+  - For example:
+    - what types of tests are available?
+    - Gaps in test suite
+  - Ultimately leading in uneven degrees of testing within the system.
 
 - Challenge 3:
-  - 
+  - *IDE* often improve productivity of a developer, but they provide a *file-centric* view of of a project.
+  - Not allowing developers to see each entity, for example a method, in context of how it is used and tested.
 ---
 
 template: inverse
@@ -151,6 +175,10 @@ template: inverse
 </div>
 ]
 
+???
+
+- Test Matrix Visualization
+
 ---
 count: false
 .left-column[
@@ -182,6 +210,10 @@ count: false
   </ul>
 </div>
 ]
+
+???
+
+- Columns represent the methods
 
 ---
 count: false
@@ -215,6 +247,10 @@ count: false
 </div>
 ]
 
+???
+
+- Rows represent the test cases
+
 ---
 count: false
 .left-column[
@@ -246,6 +282,9 @@ count: false
   </ul>
 </div>
 ]
+???
+
+- On the intersection, I present if a method was covered by the test or not.
 
 ---
 count: false
@@ -278,7 +317,9 @@ count: false
   </ul>
 </div>
 ]
+???
 
+- As a result, on a single row we can see all the methods that a single covers
 
 ---
 count: false
@@ -311,8 +352,9 @@ count: false
   </ul>
 </div>
 ]
+???
 
-
+- While in a single column we can see all the tests that cover a single method.
 
 ---
 
@@ -341,6 +383,17 @@ count: false
 </div>
 ]
 
+???
+
+- Color is used to convey information regarding the test cases and/or methods.
+
+- For example, I can color the nodes passed on:
+  1. Pass fail status
+  2. Package composition, meaning to which package the test/method belong to
+  3. Suspiciousness of a method.
+
+- Here we chose to color the intersection nodes if a test case passed or failed.
+
 ---
 count:false
 .left-column[
@@ -367,6 +420,10 @@ count:false
   </ul>
 </div>
 ]
+
+???
+
+- For a passing test case, all nodes are green.
 
 ---
 count:false
@@ -395,8 +452,12 @@ count:false
 </div>
 ]
 
----
+???
 
+- While for a failing test case all nodes are red.
+
+
+<!-- 
 .left-column[
 ## Morpheus Visualization
 #### Rows & Columns
@@ -423,8 +484,9 @@ count:false
 </div>
 ]
 
+-->
+
 ---
-count:false
 
 .left-column[
 ## Morpheus Visualization
@@ -453,10 +515,16 @@ count:false
 ]
 
 ???
+- Dependencies between software artifacts
+  - Think about dependencies between methods, tests, or methods and tests.
+
 - Artifacts within a project are normally not isolated
 
-- Goal: Juxtaposes artifacts that are related to each other.
+- Goal is to sort the artifacts in such a way we can highlight certain relationships or properties.
 
+- The example, shows both axis, so methods and tests, sorted by coverage.
+  - Methods that are covered by many test cases are presented on the left, and methods not covered are on the right side
+  - Similarly for tests we show tests covering many methods at the top, while tests covering a small number of methods are presented at the bottom.
 
 ---
 
@@ -488,14 +556,16 @@ count:false
 ]
 
 ???
-- Focussed view of a subset of the test matrix..
 
-- Goal: Filter down to aid in improved comprehension of a project's test suite.
+- Drill-downs vis filtering, resulting in a focussed view of test matrix.
 
 - Type of filters:
   - filter based on test type, e.g., unit, integration, system test;
   - filter based on test result;
   - filter based on coverage.
+
+- Goal is Filter down to aid in comprehension of a project's test suite by reducing the information presented to a developer.
+
 
 ---
 
@@ -522,6 +592,10 @@ template: inverse
   <img src="img/data-collecting.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
 
+???
+
+- The data collections can be divided up on a high level in three stages.
+
 ---
 count:false
 .left-column[
@@ -540,6 +614,10 @@ count:false
 
   <img src="img/data-collecting-annotated-1.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
+
+???
+
+1. I clone the project from github or any other version control system using `git`.
 
 ---
 count:false
@@ -560,6 +638,11 @@ count:false
   <img src="img/data-collecting-annotated-2.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
 
+???
+
+- TWO. Create a build environment to run the analysis
+
+- Next, comes the analysis which consists of two separate parts
 ---
 count:false
 .left-column[
@@ -578,6 +661,13 @@ count:false
 
   <img src="img/data-collecting-annotated-3.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
+
+???
+
+- First, we collect the per-test-case line coverage of a system.
+  - We compile the system
+  - Instrument the tests cases to obtain coverage for each test.
+  - Then write it to a database
 
 ---
 count:false
@@ -598,6 +688,11 @@ count:false
   <img src="img/data-collecting-annotated-4.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
 
+???
+
+- Second, we parse the project source code to obtain all the methods and the corresponding line ranges.
+
+- All this information is written to the database for later use in the visualization.
 ---
 
 .left-column[
@@ -612,8 +707,8 @@ count:false
 
 ???
 
-- Web Application, with a client server architecture
-- For the sake of time I will skip over this for now, but feel free to ask questions later.
+- Overall architecture, is a web application, with a client server architecture with a REST api.
+- But, for the sake of time I will skip over this for now, but feel free to ask questions later.
 
 ---
 
@@ -630,6 +725,10 @@ count:false
     [<a href="http://morpheus.kajdreef.com/visualization" target="_blank">morpheus demo</a>]
   ]
 ]
+
+???
+
+- I present you a brief demo of our implementation of the tool, *Morpheus*.
 
 ---
 
@@ -736,7 +835,7 @@ count:false
 ]
 
 .summary[
-  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.
+  ### Visualization has a higher median precision<br/> than the IDE in 4 out 5 tasks.
 ]
 
 ---
@@ -786,7 +885,7 @@ count:false
 ]
 
 .summary[
-  ### Visualization has a higher recall than the IDE <br/>in in all tasks.
+  ### Visualization has a higher median recall<br/> than the IDE  in all tasks.
 ]
 
 ---
@@ -841,8 +940,11 @@ count:false
 ]
 
 .summary[
-  ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks.
+  <!-- ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks. -->
+
+  ### The median time it takes for participants to complete the tasks </br> is lower using the visualization.
 ]
+
 
 ???
 
@@ -976,29 +1078,35 @@ count:false
 
 ## Commons-CLI
 
+<img src="img/projects/commons-cli.png" style="margin: auto; display:block; max-width: 90%;"/>
 
 ---
 count:false
 
 ## Commons-IO
 
+<img src="img/projects/commons-io.png" style="margin: auto; display:block; max-width: 90%;"/>
 
 ---
 count:false
 
 ## Maven
 
+<img src="img/projects/maven.png" style="margin: auto; display:block; max-width: 90%;"/>
 
 ---
 count:false
 
 ## JSoup
 
+<img src="img/projects/jsoup.png" style="margin: auto; display:block; max-width: 90%;"/>
 
 ---
 count:false
-## Clustering
 
+## JPacman-Framework
+
+<img src="img/projects/jpacman.png" style="margin: auto; display:block; max-width: 90%;"/>
 
 ---
 count:false
