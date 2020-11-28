@@ -130,7 +130,7 @@ template: inverse
 <br/>
 <br/>
 <div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-0.png" style="max-width: 100%;"></img>
+  <img src="img/mocks/test-matrix-example.png" style="max-width: 100%;"></img>
 </div>
 <div style="width:49%; float: right;">
 </br>
@@ -152,6 +152,169 @@ template: inverse
 ]
 
 ---
+count: false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-methods.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
+]
+
+---
+count: false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-tests.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
+]
+
+---
+count: false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-intersection.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
+]
+
+---
+count: false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-row.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
+]
+
+
+---
+count: false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-column.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Test Matrix </li>
+  <ul>
+    <li> <b>Columns</b>: Methods </li>
+    <li> <b>Rows</b>: Tests </li>
+    <li> <b>Intersection</b>: Method covered or not </li>
+  </ul>
+  <li>Each dimension is configurable:</li>
+  <ul>
+  <li> Individual source-code lines</li>
+  <li> Methods</li>
+  <li> Commits</li>
+  </ul>
+</div>
+]
+
+
+
+---
 
 .left-column[
 ## Morpheus Visualization
@@ -163,7 +326,61 @@ template: inverse
 <br/>
 <br/>
 <div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-1.png" style="max-width: 100%;"></img>
+  <img src="img/mocks/test-matrix-example-color.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Color can be used to show:</li>
+  <ul>
+    <li> Pass fail status </li>
+    <li> Package composition </li>
+    <li> Suspiciousness </li>
+  </ul>
+</div>
+]
+
+---
+count:false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+#### Color
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-color-passed.png" style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Color can be used to show:</li>
+  <ul>
+    <li> Pass fail status </li>
+    <li> Package composition </li>
+    <li> Suspiciousness </li>
+  </ul>
+</div>
+]
+
+---
+count:false
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+#### Color
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-color-failed.png" style="max-width: 100%;"></img>
 </div>
 <div style="width:49%; float: right;">
 </br>
@@ -191,7 +408,36 @@ template: inverse
 <br/>
 <br/>
 <div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-sorted.png"  style="max-width: 100%;"></img>
+  <img src="img/mocks/test-matrix-example-color.png"  style="max-width: 100%;"></img>
+</div>
+<div style="width:49%; float: right;">
+</br>
+</br>
+<ul>
+  <li>Sorting based on:</li>
+  <ul>
+    <li> Directory path and filenames </li>
+    <li> Coverage </li>
+    <li> suspiciousness </li>
+  </ul>
+</div>
+]
+
+---
+count:false
+
+.left-column[
+## Morpheus Visualization
+#### Rows & Columns
+#### Color
+#### Sort
+
+]
+.right-column[
+<br/>
+<br/>
+<div style="width:49%; float: left;">
+  <img src="img/mocks/test-matrix-example-sorted-arrows.png"  style="max-width: 100%;"></img>
 </div>
 <div style="width:49%; float: right;">
 </br>
@@ -226,7 +472,7 @@ template: inverse
 <br/>
 <br/>
 <div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-5-filtered-sorted.png" style="max-width: 100%;"></img>
+  <img src="img/mocks/test-matrix-example-filtered-sorted-arrows.png" style="max-width: 100%;"></img>
 </div>
 <div style="width:49%; float: right;">
 </br>
@@ -274,6 +520,82 @@ template: inverse
   2. Parse system to obtain line method ranges.
 
   <img src="img/data-collecting.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
+]
+
+---
+count:false
+.left-column[
+## Implementation
+#### Data Collection
+
+]
+.right-column[
+1. Clone the project
+
+2. Create Build environment
+
+3. Run analysis
+  1. Compile and test system to obtain per-test-case line coverage
+  2. Parse system to obtain line method ranges.
+
+  <img src="img/data-collecting-annotated-1.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
+]
+
+---
+count:false
+.left-column[
+## Implementation
+#### Data Collection
+
+]
+.right-column[
+1. Clone the project
+
+2. Create Build environment
+
+3. Run analysis
+  1. Compile and test system to obtain per-test-case line coverage
+  2. Parse system to obtain line method ranges.
+
+  <img src="img/data-collecting-annotated-2.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
+]
+
+---
+count:false
+.left-column[
+## Implementation
+#### Data Collection
+
+]
+.right-column[
+1. Clone the project
+
+2. Create Build environment
+
+3. Run analysis
+  1. Compile and test system to obtain per-test-case line coverage
+  2. Parse system to obtain line method ranges.
+
+  <img src="img/data-collecting-annotated-3.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
+]
+
+---
+count:false
+.left-column[
+## Implementation
+#### Data Collection
+
+]
+.right-column[
+1. Clone the project
+
+2. Create Build environment
+
+3. Run analysis
+  1. Compile and test system to obtain per-test-case line coverage
+  2. Parse system to obtain line method ranges.
+
+  <img src="img/data-collecting-annotated-4.png" style="max-width: 75%; max-height: 75%; display: block;"></img>
 ]
 
 ---
@@ -342,21 +664,23 @@ template: inverse
 .right-column[
 - Three tasks:
   1. Identify all unit and integration tests for method A.
-  <!-- 1. Distinguish different types of tests covering a specific method
-      - Locate all unit tests covering that method
-      - Locate all integration tests covering that method -->
   2. Locate all tests that cover a specific method
   3. Locate all methods that are co-failing within a specific method
 
-- Two rounds  <!-- (where all tasks were performed on commons-cli) -->
+- Two rounds:
   - Round 1: Participants development environment 
   - Round 2: Only the visualization
+
 ]
 
 ???
 
 - All tasks performed on the same project, commons-cli
 
+- 11 Participants, a group consisting of:
+  - 9 SE graduate students
+  - 1 SE undergrad
+  - 1 Software Test Engineer
 
 ---
 
@@ -371,7 +695,20 @@ template: inverse
 #### Precision
 ]
 .right-column[
-  <img src="img/results/boxplot-precision-1.png" style="margin: auto; display:block; max-width: 80%;"/>
+  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher precision is better.
+  ]
+]
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+]
+.right-column[
+  <img src="img/results/boxplot-precision-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
   .center[
     ###### higher precision is better.
   ]
@@ -384,11 +721,23 @@ template: inverse
   - big variance.
 - Precision: Ratio of *all* selected methods and those are correct.
 
---
 
-.summary[
-  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.
+---
+count:false
+.left-column[
+## Results
+#### Precision
 ]
+.right-column[
+  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher precision is better.
+  ]
+]
+
+<div class="summary" style="bottom: 100px; left: 100px;">
+  <h3> Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.</h3>
+</div>
 
 ---
 
@@ -398,16 +747,43 @@ template: inverse
 #### Recall
 ]
 .right-column[
-<img src="img/results/boxplot-recall-1.png" style="margin: auto; display:block; max-width: 80%;"/>
+<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
   .center[
     ###### higher recall is better.
   ]
 ]
 
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+]
+.right-column[
+<img src="img/results/boxplot-recall-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher recall is better.
+  ]
+]
+
+
 ???
 - Recall: Ratio of *all* selected methods and all relevant methods.
 
---
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+]
+.right-column[
+<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher recall is better.
+  ]
+]
 
 .summary[
   ### Visualization has a higher recall than the IDE <br/>in in all tasks.
@@ -428,11 +804,51 @@ template: inverse
   ]
 ]
 
---
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+#### Timing
+]
+.right-column[
+<img src="img/results/boxplot-timer-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### less time is better.
+  ]
+]
+
+???
+
+- Task 1:
+  - Deviation is smaller for the IDE
+  - Median is in favor of the visualization
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+#### Timing
+]
+.right-column[
+<img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### less time is better.
+  ]
+]
 
 .summary[
   ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks.
 ]
+
+???
+
+- We see this happen for all the other tasks as well
+- Median of visualization is lower than IDE
+- Some outliers with IDE, however, it may be that some participant started to give up after Task 1.
 
 
 ---
@@ -447,21 +863,52 @@ template: inverse
 
 - Challenge 1: Large test suites with many tests
 
-  - Traceability between tests and methods, with a high precision and recall
+  - Traceability between tests and methods
+      - high precision
+      - high recall
+  - Co-execution of methods
 
-  - Furthermore, given a method, Morpheus can show which methods it is co-executed with.
+???
+
+- Traceability between tests and methods, with a high precision and recall
+
+- Furthermore, given a method, Morpheus can show which methods it is co-executed with.
+
+- Making it possible to locate the methods of interest
+
+<hr/>
 --
 
 - Challenge 2: Maintaining test suites
 
-  - Locating types of tests (covering a specific method) is considerably faster using the visualization
+  - Locating types of tests
 
   - IDE is able to locate correct a small subset of unit tests, but low recall.
+
+???
+
+- Locating types of tests covering a specific method becomes possible with visualization
+
+- IDE is difficult and everything becomes a ``unit`` test
+
+- Visualization is faster than using the IDE
+
+<hr/>
 --
 
 - Challenge 3: Tools with local views offer inadequate comprehension
 
-  - Morpheus is able to accurately identify which methods fail together, allowing developers to step outside of just a local view.
+  - Identify co-failing methods
+
+???
+
+- Morpheus is able to accurately identify which methods fail together, allowing developers to step outside of just a local view.
+
+<hr/>
+
+- IDE is capable of doing some of these tasks
+  - Very poor recall
+  - Only tests that directly invoke the given method are easy to find
 
 ---
 
@@ -474,18 +921,23 @@ template: inverse
 ## Conclusion
 
 - The visualization *Morpheus* provides:
-  1. Global overview of all test cases and the methods they cover
+  1. Global overview of test suite
 
-  2. Local view by filtering to specific tests or methods of interest
+  2. Local view by filtering to specific tests or methods
 
-  3. Juxtapose methods and tests through sorting
+  3. Juxtaposition of data via sorting
 
-- The evaluation shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of:
-  - Accuracy
+- Developers using *morpheus* are better equipped in answering questions about a test suite.
 
-  - Time
+???
 
-  - (and also satisfaction with tool set)
+- Global overview of all test cases and the methods they cover
+
+- Local view by filtering to specific tests or methods
+
+- On top of that, we can sort and filter based on properties of the tests or methods to uncover patterns.
+
+- The evaluation shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of precision, recall, time, and also satisfaction with the tool set
 
 ---
 
@@ -493,8 +945,8 @@ template: inverse
 
 <div class="container">
   <img src="img/morpheus-ui.png" style="max-width: 40%;"/>
-  <img src="img/results/boxplot-precision-1.png" style="max-width: 40%;"/>
-  <img src="img/results/boxplot-recall-1.png" style="max-width: 40%;"/>
+  <img src="img/results/boxplot-precision.png" style="max-width: 40%;"/>
+  <img src="img/results/boxplot-recall.png" style="max-width: 40%;"/>
   <img src="img/results/boxplot-timer.png" style="max-width: 40%;"/>
 </div>
 
