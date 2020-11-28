@@ -735,9 +735,9 @@ count:false
   ]
 ]
 
-<div class="summary" style="bottom: 100px; left: 100px;">
-  <h3> Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.</h3>
-</div>
+.summary[
+  ### Visualization has a higher precision than the IDE <br/>in 4 out 5 tasks.
+]
 
 ---
 
