@@ -729,8 +729,11 @@ count:false
   ]
 ]
 
-.summary[
+<!-- .summary[
   ### In 4 out 5 tasks, the visualization has <br/> a higher median precision than the IDE.
+] -->
+.summary[
+  ### Overall, the users were more precise in locating relevant methods or tests using the visualization.
 ]
 
 ---
@@ -780,7 +783,8 @@ count:false
 ]
 
 .summary[
-  ### In all tasks, the visualization has<br/> a higher median recall than the IDE.
+  <!-- ### In all tasks, the visualization has<br/> a higher median recall than the IDE. -->
+  ### Overall, the users were able to locate considerably <br/> more relevant items using the visualization.
 ]
 
 ---
@@ -835,9 +839,7 @@ count:false
 ]
 
 .summary[
-  <!-- ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks. -->
-
-  ### In all tasks, the median time it takes for participants to </br> complete the tasks is lower using the visualization.
+  ### Overall, the participants completed the tasks faster using the visualization. 
 ]
 
 
