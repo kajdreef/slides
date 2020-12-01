@@ -21,7 +21,7 @@ layout: false
 2. Challenges
 2. Morpheus Visualization
 3. Demo
-4. Evaluation
+4. User Study
 5. Results 
 6. Discussion
 7. Conclusion
@@ -33,7 +33,7 @@ layout: false
   2. Challenges
   2. Morpheus Visualization
   3. Demo
-  4. Evaluation
+  4. User Study
   5. Results 
   6. Discussion
   7. Conclusion
@@ -45,7 +45,7 @@ template: inverse
 
 ---
 
-## Software Test Comprehension is important
+## Why Do We Care about Software Test Comprehension?
 
 - Testing is important
 
@@ -95,12 +95,12 @@ The “function” of a test deals with the specific desired behavior that the t
 
 ---
 
-##  Motivating scenario (1): Refactoring a method
+##  Motivating Scenario (1): Refactoring a Method
 
 - What kind of tests does this system have?
 - Do existing tests execute this method?
     - What kind of tests are they?
-- Did the modified/new lines of code get executed by the tests?
+- Did the tests execute the modified/new lines of code?
 
 --
 
@@ -126,11 +126,11 @@ The “function” of a test deals with the specific desired behavior that the t
 
 ---
 
-##  Motivating scenario (2): Are components A and B tested together?
+##  Motivating Scenario (2): Are Components A and B Tested Together?
 
 - How many integration tests does the test suite have?
-- Do integration tests execute methods A and B?
-- Are there any integration test executing both A and B?
+- Do any integration tests execute methods A and B?
+- Are there any integration tests executing both A and B?
 
 --
 
@@ -643,12 +643,12 @@ template: inverse
 
 template: inverse
 
-# Evaluation
+# User Study
 
 ---
 
 .left-column[
-## Evaluation
+## User Study
 #### Research Questions
 ]
 .right-column[
@@ -665,7 +665,7 @@ template: inverse
 ---
 
 .left-column[
-## Evaluation
+## User Study
 #### Research Questions
 #### User Study
 ]
@@ -948,7 +948,7 @@ template: inverse
 
 - On top of that, we can sort and filter based on properties of the tests or methods to uncover patterns.
 
-- The evaluation shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of precision, recall, time, and also satisfaction with the tool set
+- The user study shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of precision, recall, time, and also satisfaction with the tool set
 
 ---
 
