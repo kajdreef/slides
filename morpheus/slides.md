@@ -20,7 +20,7 @@ layout: false
 1. Introduction
 2. Challenges
 2. Morpheus Visualization
-3. Implementation
+3. Demo
 4. Evaluation
 5. Results 
 6. Discussion
@@ -32,7 +32,7 @@ layout: false
   1. Introduction
   2. Challenges
   2. Morpheus Visualization
-  3. Implementation
+  3. Demo
   4. Evaluation
   5. Results 
   6. Discussion
@@ -45,7 +45,7 @@ template: inverse
 
 ---
 
-## Introduction
+## Software Test Comprehension is important
 
 - Testing is important
 
@@ -63,7 +63,7 @@ template: inverse
 
 - Testing important:
   - It allows developers to **verify product behavior**.
-  - and, **verify correctness by establishing a test oracle**
+  - and, **by establishing a test oracle, verify correctness**
 
 - Test suite provides valuable information regarding how a system is expected to behave.
   - As a result, the test suite can aid in better understanding your system.
@@ -71,23 +71,10 @@ template: inverse
 <!-- - Test-suite development and maintenance is difficult, particularly when comprehension is limited -->
 
 - Traditional tools provide challenges to comprehension, due to giving only a local, *file-centric*, view, presenting an opportunity to improve.
----
-
-## Motivating scenario
-<br/><br/><br/><br/>
-> A developer wants to refactor an existing method. Before starting, the developer is interested in determining which tests are covering this method to assure that the refactoring will not cause any regression.
-
-???
-
-> A developer wants to refactor an existing method. Before starting, the developer is interested in determining which tests are covering this method to assure that the refactoring will not cause any regression.
-
-- IDE provide *file-centric* view of what you are working on
-  - Unable to provide insight into what tests cover the method.
-
 
 ---
 
-## Comprehension: Form & Function
+## Software Test Comprehension: Form & Function
 
 <br/>
 > **Form**: Global overview of the composition of the test suite.
@@ -100,11 +87,59 @@ template: inverse
 
 Form = Composition of the test suite
   - unit, integration, system tests
-  - What is covered and not covered by the tests
+  - What is executed and not executed by the tests
 
 The “function” of a test deals with the specific desired behavior that the test is testing for, and the specific components and methods that it executes when doing so.
 
 - However, test suite comprehension brings its own unique set of challenges... (next slide)
+
+---
+
+##  Motivating scenario (1): Refactoring a method
+
+- Which test cases executed the method we want to refactor?
+
+.left50[
+- IDE 
+  - Breakpoints
+  - Logging
+  - Assert statements
+  - ...
+]
+.right50[
+  .center[
+  <img src="img/misc/logoutput.png" style="max-width: 100%;"></img>
+  <img src="img/misc/breakpoints.png" style="max-width: 100%;"></img>
+  ]
+]
+
+???
+
+- Manual process
+- Time consuming
+- Losing information
+
+---
+
+##  Motivating scenario (2): Are components A and B tested together?
+
+- Which test cases execute component A and B together?
+
+.left50[
+- IDE 
+  - Breakpoints
+  - Logging
+  - Assert statements
+  - ...
+]
+.right50[
+  .center[
+  <img src="img/misc/logoutput.png" style="max-width: 100%;"></img>
+  <img src="img/misc/breakpoints.png" style="max-width: 100%;"></img>
+  ]
+]
+
+???
 
 ---
 template: inverse
@@ -113,7 +148,7 @@ template: inverse
 
 ---
 
-## Challenges
+## Test Comprehension Challenges
 
 - Challenge 1: Large test suites with many tests
 
@@ -124,7 +159,7 @@ template: inverse
 ???
 
 - Challenge 1:
-  - Developers have difficulty figuring out which test cases cover what methods.
+  - Developers have difficulty figuring out which test cases execute what methods.
   - Lack of traceability between test and production code
 
 - Challenge 2:
@@ -164,9 +199,9 @@ template: inverse
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -200,9 +235,9 @@ count: false
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -236,9 +271,9 @@ count: false
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -272,9 +307,9 @@ count: false
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -284,7 +319,7 @@ count: false
 ]
 ???
 
-- On the intersection, I present if a method was covered by the test or not.
+- On the intersection, I present if a method was executed by the test or not.
 
 ---
 count: false
@@ -307,9 +342,9 @@ count: false
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -319,7 +354,7 @@ count: false
 ]
 ???
 
-- As a result, on a single row we can see all the methods that a single covers
+- As a result, on a single row we can see all the methods that a single test execute.
 
 ---
 count: false
@@ -342,9 +377,9 @@ count: false
   <ul>
     <li> <b>Columns</b>: Methods </li>
     <li> <b>Rows</b>: Tests </li>
-    <li> <b>Intersection</b>: Method covered or not </li>
+    <li> <b>Intersection</b>: Method executed or not </li>
   </ul>
-  <li>Each dimension is configurable:</li>
+  <li>Each dimension is configurable, e.g.,</li>
   <ul>
   <li> Individual source-code lines</li>
   <li> Methods</li>
@@ -354,7 +389,7 @@ count: false
 ]
 ???
 
-- While in a single column we can see all the tests that cover a single method.
+- While in a single column we can see all the tests that execute a single method.
 
 ---
 
@@ -374,7 +409,7 @@ count: false
 </br>
 </br>
 <ul>
-  <li>Color can be used to show:</li>
+  <li>Color can be used to show, e.g.,</li>
   <ul>
     <li> Pass fail status </li>
     <li> Package composition </li>
@@ -387,7 +422,7 @@ count: false
 
 - Color is used to convey information regarding the test cases and/or methods.
 
-- For example, I can color the nodes passed on:
+- For example, I can color the nodes by:
   1. Pass fail status
   2. Package composition, meaning to which package the test/method belong to
   3. Suspiciousness of a method.
@@ -412,7 +447,7 @@ count:false
 </br>
 </br>
 <ul>
-  <li>Color can be used to show:</li>
+  <li>Color can be used to show, e.g.,</li>
   <ul>
     <li> Pass fail status </li>
     <li> Package composition </li>
@@ -443,7 +478,7 @@ count:false
 </br>
 </br>
 <ul>
-  <li>Color can be used to show:</li>
+  <li>Color can be used to show, e.g.,</li>
   <ul>
     <li> Pass fail status </li>
     <li> Package composition </li>
@@ -455,36 +490,6 @@ count:false
 ???
 
 - While for a failing test case all nodes are red.
-
-
-<!-- 
-.left-column[
-## Morpheus Visualization
-#### Rows & Columns
-#### Color
-#### Sort
-
-]
-.right-column[
-<br/>
-<br/>
-<div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-color.png"  style="max-width: 100%;"></img>
-</div>
-<div style="width:49%; float: right;">
-</br>
-</br>
-<ul>
-  <li>Sorting based on:</li>
-  <ul>
-    <li> Directory path and filenames </li>
-    <li> Coverage </li>
-    <li> suspiciousness </li>
-  </ul>
-</div>
-]
-
--->
 
 ---
 
@@ -505,11 +510,11 @@ count:false
 </br>
 </br>
 <ul>
-  <li>Sorting based on:</li>
+  <li>Sorting based on, e.g.,</li>
   <ul>
     <li> Directory path and filenames </li>
     <li> Coverage </li>
-    <li> suspiciousness </li>
+    <li> Suspiciousness </li>
   </ul>
 </div>
 ]
@@ -523,8 +528,8 @@ count:false
 - Goal is to sort the artifacts in such a way we can highlight certain relationships or properties.
 
 - The example, shows both axis, so methods and tests, sorted by coverage.
-  - Methods that are covered by many test cases are presented on the left, and methods not covered are on the right side
-  - Similarly for tests we show tests covering many methods at the top, while tests covering a small number of methods are presented at the bottom.
+  - Methods that are executed by many test cases are presented on the left, and methods not executed are on the right side
+  - Similarly for tests we show tests executing many methods at the top, while tests executing a small number of methods are presented at the bottom.
 
 ---
 
@@ -540,13 +545,13 @@ count:false
 <br/>
 <br/>
 <div style="width:49%; float: left;">
-  <img src="img/mocks/test-matrix-example-filtered-sorted-arrows.png" style="max-width: 100%;"></img>
+  <img src="img/mocks/test-matrix-example-filtered-sorted-annotated.png" style="max-width: 100%;"></img>
 </div>
 <div style="width:49%; float: right;">
 </br>
 </br>
 <ul>
-  <li>Filtering based on:</li>
+  <li>Filtering based on, e.g.,</li>
   <ul>
     <li> Test type</li>
     <li> Test result </li>
@@ -568,13 +573,466 @@ count:false
 
 
 ---
-
 template: inverse
 
-# Implementation
+# Demo
 
 ---
 
+.left-column[
+## Demo
+#### Commons-IO
+]
+.right-column[
+<br/><br/><br/>
+  <img src="img/projects/commons-io-atleast1.png" style="max-width: 100%; max-height: 75%;"></img>
+      
+  .center[
+    [<a href="localhost:3000/visualization" target="_blank">Morpheus demo</a>]
+  ]
+]
+
+???
+
+
+---
+
+.left-column[
+## Demo
+#### Commons-IO
+#### Maven
+]
+.right-column[
+<br/><br/><br/>
+  <img src="img/projects/maven-atleast1.png" style="max-width: 100%; max-height: 75%;"></img>
+]
+
+???
+
+---
+
+.left-column[
+## Demo
+#### Commons-IO
+#### Maven
+#### Commons-CLI
+
+]
+.right-column[
+<br/><br/><br/>
+  <img src="img/projects/commons-cli.png" style="max-width: 100%; max-height: 75%;"></img>
+]
+
+???
+
+
+---
+
+template: inverse
+
+# Evaluation
+
+---
+
+.left-column[
+## Evaluation
+#### Research Questions
+]
+.right-column[
+<br/><br/>
+
+- **RQ1**: Can the visualization provide insights into the *composition* of the test suite?
+
+- **RQ2**: Can the visualization provide *traceability* between test and production code?
+
+- **RQ3**: Can the visualization help identify sets of methods that fail together (i.e., executed by the same failing test cases)?
+
+]
+
+---
+
+.left-column[
+## Evaluation
+#### Research Questions
+#### User Study
+]
+.right-column[
+- Three tasks:
+  1. Identify all unit and integration tests for a specific method.
+  2. Locate all tests that execute a specific method.
+  3. Locate all methods that are co-failing with a specific method.
+
+- Two rounds:
+  - Round 1: Participant's development environment 
+  - Round 2: Only the visualization
+]
+
+???
+
+- All tasks performed on the same project, commons-cli
+
+- 11 Participants, a group consisting of:
+  - 9 SE graduate students
+  - 1 SE undergrad
+  - 1 Software Test Engineer
+
+---
+
+template: inverse
+
+# Results
+
+---
+
+.left-column[
+## Results
+#### Precision
+]
+.right-column[
+  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher precision is better
+  ]
+]
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+]
+.right-column[
+  <img src="img/results/boxplot-precision-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher precision is better
+  ]
+]
+
+???
+- red line represents the median
+- Task 2:
+  - same medians
+  - big variance.
+- Precision: Ratio of *all* selected methods and those are correct.
+
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+]
+.right-column[
+  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher precision is better
+  ]
+]
+
+.summary[
+  ### In 4 out 5 tasks, the visualization has <br/> a higher median precision than the IDE.
+]
+
+---
+
+.left-column[
+## Results
+#### Precision
+#### Recall
+]
+.right-column[
+<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher recall is better
+  ]
+]
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+]
+.right-column[
+<img src="img/results/boxplot-recall-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher recall is better
+  ]
+]
+
+
+???
+- Recall: Ratio of *all* selected methods and all relevant methods.
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+]
+.right-column[
+<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### higher recall is better
+  ]
+]
+
+.summary[
+  ### In all tasks, the visualization has<br/> a higher median recall than the IDE.
+]
+
+---
+
+.left-column[
+## Results
+#### Precision
+#### Recall
+#### Timing
+]
+.right-column[
+<img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### less time is better
+  ]
+]
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+#### Timing
+]
+.right-column[
+<img src="img/results/boxplot-timer-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### less time is better
+  ]
+]
+
+???
+
+- Task 1:
+  - Deviation is smaller for the IDE
+  - Median is in favor of the visualization
+
+---
+count:false
+.left-column[
+## Results
+#### Precision
+#### Recall
+#### Timing
+]
+.right-column[
+<img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
+  .center[
+    ###### less time is better
+  ]
+]
+
+.summary[
+  <!-- ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks. -->
+
+  ### In all tasks, the median time it takes for participants to </br> complete the tasks is lower using the visualization.
+]
+
+
+???
+
+- We see this happen for all the other tasks as well
+- Median of visualization is lower than IDE
+- Some outliers with IDE, however, it may be that some participant started to give up after Task 1.
+
+
+---
+
+template: inverse
+
+# Discussion
+
+---
+
+## Discussion
+
+- Challenge 1: Large test suites with many tests
+
+  - Traceability between tests and methods
+      - high precision
+      - high recall
+
+???
+
+- Traceability between tests and methods, with a high precision and recall
+
+- Furthermore, given a method, Morpheus can show which methods it is co-executed with.
+
+- Making it possible to locate the methods of interest
+
+--
+
+- Challenge 2: Maintaining test suites
+
+  - Locating types of tests
+
+  - IDE is able to locate correct a small subset of unit tests, but low recall.
+
+???
+<hr/>
+
+- Locating types of tests executing a specific method becomes possible with visualization
+
+- IDE is difficult and everything becomes a unit test
+
+- Visualization is faster than using the IDE
+
+
+--
+
+- Challenge 3: Tools with local views offer inadequate comprehension
+
+  - Identify co-failing methods
+
+???
+
+- Morpheus is able to accurately identify which methods fail together, allowing developers to step outside of just a local view.
+
+<hr/>
+
+- IDE is capable of doing some of these tasks
+  - Very poor recall
+  - Only tests that directly invoke the given method are easy to find
+
+---
+
+template: inverse
+
+# Conclusion
+
+---
+
+## Conclusion
+
+- The visualization *Morpheus* provides:
+  1. Global overview of test suite
+
+  2. Local view by filtering to specific tests or methods
+
+  3. Juxtaposition of data via sorting
+
+- Developers using *Morpheus* are better equipped in answering questions about a test suite.
+
+???
+
+- Global overview of all test cases and the methods they execute
+
+- Local view by filtering to specific tests or methods
+
+- On top of that, we can sort and filter based on properties of the tests or methods to uncover patterns.
+
+- The evaluation shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of precision, recall, time, and also satisfaction with the tool set
+
+---
+
+## Questions?
+
+<div class="container">
+  <img src="img/morpheus-ui.png" style="max-width: 40%;"/>
+  <img src="img/results/boxplot-precision.png" style="max-width: 40%;"/>
+  <img src="img/results/boxplot-recall.png" style="max-width: 40%;"/>
+  <img src="img/results/boxplot-timer.png" style="max-width: 40%;"/>
+</div>
+
+
+
+
+
+---
+count:false
+
+template: inverse
+# Extra slides
+
+---
+count:false
+
+## F-Score
+
+<img src="img/results/boxplot-fscore-1.png" style="margin: auto; display:block; max-width: 75%;"/>
+
+
+---
+count:false
+
+## Tool Satisfaction
+
+<img src="img/results/boxplot-satisfaction.png" style="margin: auto; display:block; max-width: 75%;"/>
+
+---
+count:false
+
+## Commons-CLI
+
+<img src="img/projects/commons-cli.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+
+## Commons-IO - overview
+
+<img src="img/projects/commons-io.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+## Commons-IO - Filtered methods: Executed at least once
+
+<img src="img/projects/commons-io-atleast1.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+
+---
+count:false
+
+## Maven - overview
+
+<img src="img/projects/maven.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+
+## Maven - Filtered methods: Executed at least once
+
+<img src="img/projects/maven-atleast1.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+
+## JSoup
+
+<img src="img/projects/jsoup.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+
+## JPacman-Framework
+
+<img src="img/projects/jpacman.png" style="margin: auto; display:block; max-width: 90%;"/>
+
+---
+count:false
+
+## Matrix vs Node-Link visualizations
+
+- Node-Link has several downsides:
+
+  1. it deals poorly with dense networks;
+
+  2. requires aggregation methods or a good layout to reduce the density to be readable.
+
+---
+count:false
 .left-column[
 ## Implementation
 #### Data Collection
@@ -694,7 +1152,7 @@ count:false
 
 - All this information is written to the database for later use in the visualization.
 ---
-
+count:false
 .left-column[
 ## Implementation
 #### Data Collection
@@ -710,423 +1168,3 @@ count:false
 - Overall architecture, is a web application, with a client server architecture with a REST api.
 - But, for the sake of time I will skip over this for now, but feel free to ask questions later.
 
----
-
-.left-column[
-## Implementation
-#### Data Collection
-#### Architecture
-#### Visualization
-]
-.right-column[
-<br/><br/><br/>
-  <img src="img/morpheus-ui.png" style="max-width: 100%; max-height: 75%;"></img>
-  .center[
-    [<a href="http://morpheus.kajdreef.com/visualization" target="_blank">morpheus demo</a>]
-  ]
-]
-
-???
-
-- I present you a brief demo of our implementation of the tool, *Morpheus*.
-
----
-
-template: inverse
-
-# Evaluation
-
----
-
-.left-column[
-## Evaluation
-#### Research Questions
-]
-.right-column[
-<br/><br/>
-
-- **RQ1**: Can the visualization provide insights into the *composition* of the test suite?
-
-- **RQ2**: Can the visualization provide *traceability* between test and production code?
-
-- **RQ3**: Can the visualization help identify sets of methods that fail together (i.e., executed by the same failing test cases)?
-
-]
-
----
-
-.left-column[
-## Evaluation
-#### Research Questions
-#### User Study
-]
-.right-column[
-- Three tasks:
-  1. Identify all unit and integration tests for method A.
-  2. Locate all tests that cover a specific method
-  3. Locate all methods that are co-failing within a specific method
-
-- Two rounds:
-  - Round 1: Participants development environment 
-  - Round 2: Only the visualization
-
-]
-
-???
-
-- All tasks performed on the same project, commons-cli
-
-- 11 Participants, a group consisting of:
-  - 9 SE graduate students
-  - 1 SE undergrad
-  - 1 Software Test Engineer
-
----
-
-template: inverse
-
-# Results
-
----
-
-.left-column[
-## Results
-#### Precision
-]
-.right-column[
-  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher precision is better.
-  ]
-]
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-]
-.right-column[
-  <img src="img/results/boxplot-precision-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher precision is better.
-  ]
-]
-
-???
-- red line represents the median
-- Task 2:
-  - same medians
-  - big variance.
-- Precision: Ratio of *all* selected methods and those are correct.
-
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-]
-.right-column[
-  <img src="img/results/boxplot-precision.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher precision is better.
-  ]
-]
-
-.summary[
-  ### Visualization has a higher median precision<br/> than the IDE in 4 out 5 tasks.
-]
-
----
-
-.left-column[
-## Results
-#### Precision
-#### Recall
-]
-.right-column[
-<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher recall is better.
-  ]
-]
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-#### Recall
-]
-.right-column[
-<img src="img/results/boxplot-recall-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher recall is better.
-  ]
-]
-
-
-???
-- Recall: Ratio of *all* selected methods and all relevant methods.
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-#### Recall
-]
-.right-column[
-<img src="img/results/boxplot-recall.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### higher recall is better.
-  ]
-]
-
-.summary[
-  ### Visualization has a higher median recall<br/> than the IDE  in all tasks.
-]
-
----
-
-.left-column[
-## Results
-#### Precision
-#### Recall
-#### Timing
-]
-.right-column[
-<img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### less time is better.
-  ]
-]
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-#### Recall
-#### Timing
-]
-.right-column[
-<img src="img/results/boxplot-timer-annotated.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### less time is better.
-  ]
-]
-
-???
-
-- Task 1:
-  - Deviation is smaller for the IDE
-  - Median is in favor of the visualization
-
----
-count:false
-.left-column[
-## Results
-#### Precision
-#### Recall
-#### Timing
-]
-.right-column[
-<img src="img/results/boxplot-timer.png" style="margin: auto; display:block; max-width: 80%;"/>
-  .center[
-    ###### less time is better.
-  ]
-]
-
-.summary[
-  <!-- ###  Participants using the visualization perform the tasks </br> on average faster than the IDE in all tasks. -->
-
-  ### The median time it takes for participants to complete the tasks </br> is lower using the visualization.
-]
-
-
-???
-
-- We see this happen for all the other tasks as well
-- Median of visualization is lower than IDE
-- Some outliers with IDE, however, it may be that some participant started to give up after Task 1.
-
-
----
-
-template: inverse
-
-# Discussion
-
----
-
-## Discussion
-
-- Challenge 1: Large test suites with many tests
-
-  - Traceability between tests and methods
-      - high precision
-      - high recall
-  - Co-execution of methods
-
-???
-
-- Traceability between tests and methods, with a high precision and recall
-
-- Furthermore, given a method, Morpheus can show which methods it is co-executed with.
-
-- Making it possible to locate the methods of interest
-
-<hr/>
---
-
-- Challenge 2: Maintaining test suites
-
-  - Locating types of tests
-
-  - IDE is able to locate correct a small subset of unit tests, but low recall.
-
-???
-
-- Locating types of tests covering a specific method becomes possible with visualization
-
-- IDE is difficult and everything becomes a ``unit`` test
-
-- Visualization is faster than using the IDE
-
-<hr/>
---
-
-- Challenge 3: Tools with local views offer inadequate comprehension
-
-  - Identify co-failing methods
-
-???
-
-- Morpheus is able to accurately identify which methods fail together, allowing developers to step outside of just a local view.
-
-<hr/>
-
-- IDE is capable of doing some of these tasks
-  - Very poor recall
-  - Only tests that directly invoke the given method are easy to find
-
----
-
-template: inverse
-
-# Conclusion
-
----
-
-## Conclusion
-
-- The visualization *Morpheus* provides:
-  1. Global overview of test suite
-
-  2. Local view by filtering to specific tests or methods
-
-  3. Juxtaposition of data via sorting
-
-- Developers using *morpheus* are better equipped in answering questions about a test suite.
-
-???
-
-- Global overview of all test cases and the methods they cover
-
-- Local view by filtering to specific tests or methods
-
-- On top of that, we can sort and filter based on properties of the tests or methods to uncover patterns.
-
-- The evaluation shows developers were better equipped using the visualization to answer questions regarding traceability between tests and methods, in terms of precision, recall, time, and also satisfaction with the tool set
-
----
-
-## Questions?
-
-<div class="container">
-  <img src="img/morpheus-ui.png" style="max-width: 40%;"/>
-  <img src="img/results/boxplot-precision.png" style="max-width: 40%;"/>
-  <img src="img/results/boxplot-recall.png" style="max-width: 40%;"/>
-  <img src="img/results/boxplot-timer.png" style="max-width: 40%;"/>
-</div>
-
----
-count:false
-
-template: inverse
-# Extra slides
-
----
-count:false
-
-## F-Score
-
-<img src="img/results/boxplot-fscore-1.png" style="margin: auto; display:block; max-width: 75%;"/>
-
-
----
-count:false
-
-## Tool Satisfaction
-
-<img src="img/results/boxplot-satisfaction.png" style="margin: auto; display:block; max-width: 75%;"/>
-
----
-count:false
-
-## Commons-CLI
-
-<img src="img/projects/commons-cli.png" style="margin: auto; display:block; max-width: 90%;"/>
-
----
-count:false
-
-## Commons-IO
-
-<img src="img/projects/commons-io.png" style="margin: auto; display:block; max-width: 90%;"/>
-
----
-count:false
-
-## Maven
-
-<img src="img/projects/maven.png" style="margin: auto; display:block; max-width: 90%;"/>
-
----
-count:false
-
-## JSoup
-
-<img src="img/projects/jsoup.png" style="margin: auto; display:block; max-width: 90%;"/>
-
----
-count:false
-
-## JPacman-Framework
-
-<img src="img/projects/jpacman.png" style="margin: auto; display:block; max-width: 90%;"/>
-
----
-count:false
-## Case study 1: Test Suite Composition
-
----
-count:false
-## Case study 2: Test Failure Comprehension
-
----
-count:false
-## Case study 3: Inter-Project Test Suite Patterns
-
-
----
-count:false
-## Matrix vs Node-Link visualizations
-
-- Node-Link has several downsides:
-
-  1. it deals poorly with dense networks;
-
-  2. requires aggregation methods or a good layout to reduce the density to be readable.

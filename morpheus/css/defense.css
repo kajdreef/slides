@@ -55,6 +55,18 @@ h1, h2, h3 {
   padding-top: 1em;
 }
 
+.left50 {
+  width:50%;
+  float:left;
+  padding-top: 1em;
+}
+
+.right50 {
+  width: 50%;
+  float: right;
+  padding-top: 1em;
+}
+
 .container {
   width: 100%;
   display: flex;
