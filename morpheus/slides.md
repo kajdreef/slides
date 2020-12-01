@@ -97,7 +97,12 @@ The “function” of a test deals with the specific desired behavior that the t
 
 ##  Motivating scenario (1): Refactoring a method
 
-- Which test cases executed the method we want to refactor?
+- What kind of tests does this system have?
+- Do existing tests execute this method?
+    - What kind of tests are they?
+- Did the modified/new lines of code get executed by the tests?
+
+--
 
 .left50[
 - IDE 
@@ -123,7 +128,11 @@ The “function” of a test deals with the specific desired behavior that the t
 
 ##  Motivating scenario (2): Are components A and B tested together?
 
-- Which test cases execute component A and B together?
+- How many integration tests does the test suite have?
+- Do integration tests execute methods A and B?
+- Are there any integration test executing both A and B?
+
+--
 
 .left50[
 - IDE 
@@ -141,6 +150,10 @@ The “function” of a test deals with the specific desired behavior that the t
 
 ???
 
+- Breakpoints: manual and laborious
+- Logging: can be overwhelming
+- Assert statements: localized, method/file-centric views
+- ...
 ---
 template: inverse
 
